@@ -1,0 +1,152 @@
+:root {
+    --color-red: #f14c24;
+    --color-green: #62f124;
+    --color-blue: #24c9f1;
+    --color-light-blue: #ade7f7;
+    --color-gray: #8f8f8f;
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.form {
+    width: 960px;
+}
+
+.address {
+    border: none;
+    padding: 1rem 0;
+}
+
+.address .title {
+    font-weight: bold;
+    color: var(--color-gray);
+}
+
+.address .row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.address label {
+    text-align: right;
+    padding-right: 1rem;
+}
+
+.address input, .address select {
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: .325rem .75rem;
+    border-radius: .25rem;
+    border: 1px solid var(--color-gray);
+}
+
+.address select {
+    appearance: none;
+}
+
+.address label[for="zip"],
+.address label[for="street"],
+.address label[for="country"] {
+    width: 6.25%;
+}
+.address label[for="city"],
+.address #houseNumber {
+    width: 12.5%;
+}
+.address #zip,
+.address label[for="houseNumber"] {
+    width: 18.75%;
+}
+.address #street,
+.address #city {
+    width: 62.5%;
+}
+
+.address #country {
+    width: 93.75%;
+}
+
+.address input:valid {
+    border: 1px solid var(--color-green);
+}
+
+.address input:invalid {
+    border: 1px solid var(--color-red);
+}
+
+.address .info {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.address .info #info {
+    margin-left: 1rem;
+}
+
+.alert {
+    opacity: 1;
+    transition: opacity .5s;
+    position: relative;
+    width: 100%;
+    border: 1px solid var(--color-blue);
+    border-radius: .25rem;
+    padding: .25rem 1.5rem .25rem .5rem;
+    font-size: smaller;
+    background-color: var(--color-light-blue);
+}
+
+.alert .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    box-sizing: content-box;
+    width: 1rem;
+    height: 1rem;
+    background: transparent;
+    padding: .25rem .5rem;
+    font-size: 1rem;
+}
+
+
+.contract-part form {
+    display: flex;
+}
+.contract-part label {
+    margin-right: 1rem;
+    text-align: right;
+    width: 12.5%;
+}
+
+.contract-part input,
+.contract-part textarea {
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: .325rem .75rem;
+    border-radius: .25rem;
+    border: 1px solid var(--color-gray);
+}
+
+.contract-part input:valid,
+.contract-part textarea:valid {
+    border-color: var(--color-green);
+}
+
+.contract-part input:invalid,
+.contract-part textarea:invalid {
+    border-color: var(--color-red);
+}
+
+.contract-part textarea {
+    width: 87.5%;
+}
